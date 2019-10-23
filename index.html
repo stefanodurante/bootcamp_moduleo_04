@@ -2,9 +2,9 @@
 <html>
 
 <head>
-  <!-- Standard bajo el cual codificamos los caracteres a lenguaje máquina -->
-  <meta charset="utf-8">
-  <!-- Optimización para dispositivos móviles. Por defecto, el navegador, renderiza
+    <!-- Standard bajo el cual codificamos los caracteres a lenguaje máquina -->
+    <meta charset="utf-8">
+    <!-- Optimización para dispositivos móviles. Por defecto, el navegador, renderiza
   el contenido en un viewport virtual más grande para despues reescalarlo al tamaño
   de pantalla. Hace esto porque supone que la web no está optimizada para móvil (no 
   usa media queries para controlar distintos tamaños de pantalla). Con esta técnica
@@ -14,49 +14,57 @@
   o no funcionar adecuadamente. En tal caso, indicamos al navegador que utilice
   un viewport igual al tamaño de pantalla del dispositivo y sin escalado inicial (=1).
   -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Título que se verá en la pestaña del navegador -->
-  <title>Bootcamp Javascript - Módulo 3 - Funciones</title>
-  <!-- Añade la hoja de estilos con las reglas css -->
-  <link rel="stylesheet" href="app.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Título que se verá en la pestaña del navegador -->
+    <title>Bootcamp Javascript - Módulo 3 - Funciones</title>
+    <!-- Añade la hoja de estilos con las reglas css -->
+    <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
-  <header id="title">
-    <h1>Playground</h1>
-  </header>
-  <main>
+    <header id="title">
+        <h1 id="main-header">Playground</h1>
+    </header>
+    <main>
 
-    <div class="block">
-      <h3>Practica</h3>
-      <p id="full-name"></p>
 
-      <input type="text" id="input-name" value=""/>
-      <input type="text" id="input-surname1" value=""/>
-      <input type="text" id="input-surname2" value=""/>
+        <div class="block">
+            <button id="my-button">Click</button>
+            <input type="text" value="" id="my-input" />
+        </div>
 
-      <button id="button-submit">Enviar</button>
-    </div>
 
-    <div class="block">
-      <h3>Laboratório</h3>
+        <div class="block">
+            <h3>Práctica</h3>
+            <p id="full-name"></p>
 
-      <div class="c-operating">
-      <input class="c-number" type="number" id="operating-1" value=""/>
-      <input class="c-number" type="number" id="operating-2" value=""/>
-      </div>
-      <input type="text" id="result" disabled>
-      
-      <button id="button-sum">+</button>
-      <button id="button-sus">-</button>
-      <button id="button-mul">*</button>
-      <button id="button-div">/</button>
+            <input type="text" id="input-name" value="" />
+            <input type="text" id="input-surname1" value="" />
+            <input type="text" id="input-surname2" value="" />
 
-      <button id="button-result" style="background:grey;">=</button>
+            <button id="button-submit">Enviar</button>
+        </div>
 
-    </div>
-  </main>
-  <script src="app.js"></script>
+        <div class="block">
+            <h3>Laboratório</h3>
+
+            <div class="c-operating">
+                <input class="c-number" type="number" id="operating-1" value="" />
+                <input class="c-number" type="number" id="operating-2" value="" />
+            </div>
+            <input type="text" id="result" disabled>
+
+            <button id="button-sum">+</button>
+            <button id="button-sus">-</button>
+            <button id="button-mul">*</button>
+            <button id="button-div">/</button>
+
+            <button id="button-result" style="background:grey;">=</button>
+
+        </div>
+    </main>
+    <script src="exemples.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
