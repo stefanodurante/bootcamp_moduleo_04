@@ -67,18 +67,42 @@ document.getElementById("input-surname2").addEventListener("keyup", submitName);
 
 
 /* module 4 laboratorio */
+let operating1 = () => document.getElementById("operating-1").value;
+let operating2 = () => document.getElementById("operating-2").value;
 
-function submitAdd (num1, num2) {
-    return num1 + num2;
+const errorMessage = () => document.getElementById('result').value = "Error";
+
+let add = () => document.getElementById('result').value = Number(operating1()) + Number(operating2());
+let sus = () => document.getElementById('result').value = Number(operating1()) - Number(operating2());
+let mul = () => document.getElementById('result').value = Number(operating1()) * Number(operating2());
+let div = () => document.getElementById('result').value = Number(operating1()) / Number(operating2());
+
+function isError () {
+    if (operating1() == 0 || operating2() == 0  ) {
+        return errorMessage();
+    }
 }
-function submitSus (num1, num2) {
-    return num1 - num2;
+
+function submitAdd () {
+    add();
 }
-function submitMult (num1, num2) {
-    return num1 * num2;
+function submitSus () {
+    sus();
 }
-function submitDiv (num1, num2) {
-    return num1 * num2;
+function submitMult () {
+    mul();
 }
-console.log(submitAdd(5, 2));
-console.log(submitSus(5, 2));
+function submitDiv () {
+    div();
+}
+function submitResult () {
+   console.log(add());
+}
+
+
+document.getElementById("button-sum").addEventListener("click", submitAdd); 
+document.getElementById("button-sus").addEventListener("click", submitSus);
+document.getElementById("button-mul").addEventListener("click", submitMult); 
+document.getElementById("button-div").addEventListener("click", submitDiv);
+
+document.getElementById("button-result").addEventListener("click", submitResult);
