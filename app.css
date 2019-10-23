@@ -18,3 +18,12 @@ input {
 button {
   background:lightseagreen;
 }
+.c-operating {
+  display:flex;
+  justify-content: center;
+}
+.c-number {
+  max-width:none;
+  width:30px;
+  margin:0 1rem 1rem;
+}
